@@ -22,14 +22,14 @@ interface CourseDao {
     suspend fun deleteCourse(course: Course)
 
     @Query("Select * from Course order by :columnName asc")
-    fun getAllCourses(columnName: String): LiveData<Course>
+    fun getAllCourses(columnName: String): LiveData<List<Course>>
 
     @Query("Select * from Course where name like :searchQuery")
-    fun searchCoursesByName(searchQuery: String): LiveData<Course>
+    fun searchCoursesByName(searchQuery: String): LiveData<List<Course>>
 
     @Query("Select * from Course where startDate<CURDATE()")
-    fun getAlreadyStartedCourses(): LiveData<Course>
+    fun getAlreadyStartedCourses(): LiveData<List<Course>>
 
     @Query("Select * from Course where type = :type")
-    fun getCoursesBasedOnType(type:String): LiveData<Course>
+    fun getCoursesBasedOnType(type:String): LiveData<List<Course>>
 }
