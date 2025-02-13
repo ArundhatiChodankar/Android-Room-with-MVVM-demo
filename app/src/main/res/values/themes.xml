@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AndroidRoomMVVMApplication" parent="Theme.Material3.DayNight">
+         Customize your light theme here.
+         <item name="colorPrimary">@color/lime_a200</item>
+         <item name="colorPrimaryVariant">@color/lime_600</item>
+         <item name="colorOnPrimary">@color/black</item>
+
+        <item name="colorSecondary">@color/light_green_a400</item>
+         <item name="colorSecondaryVariant">@color/light_green_600</item>
+         <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+    <style name="Theme.AndroidRoomMVVMApplication" parent="Base.Theme.AndroidRoomMVVMApplication" />
+</resources>
