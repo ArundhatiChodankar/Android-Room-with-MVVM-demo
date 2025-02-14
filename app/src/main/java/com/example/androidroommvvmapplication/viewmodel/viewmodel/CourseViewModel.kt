@@ -8,26 +8,26 @@ import com.example.androidroommvvmapplication.model.repository.CourseRepository
 import kotlinx.coroutines.launch
 
 class CourseViewModel(private val repository: CourseRepository):ViewModel() {
-    private var courseList: LiveData<List<Course>>
+    var courseList: LiveData<List<Course>>
 
     init {
          courseList = repository.getAllCourses("id")
     }
 
-    suspend fun insertCourse(course: Course){
+    fun insertCourse(course: Course){
         viewModelScope.launch {
             repository.insertCourse(course)
         }
 
     }
 
-    suspend fun updateCourse(course: Course){
+     fun updateCourse(course: Course){
         viewModelScope.launch {
             repository.updateCourse(course)
         }
     }
 
-    suspend fun deleteCourse(course: Course){
+     fun deleteCourse(course: Course){
         viewModelScope.launch {
             repository.deleteCourse(course)
         }

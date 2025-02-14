@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidRoomMVVMApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="categories">
+        <item>Bakery</item>
+        <item>Design</item>
+        <item>Marketing</item>
+        <item>IT</item>
+        <item>Hotel Management</item>
+    </string-array>
 </resources>

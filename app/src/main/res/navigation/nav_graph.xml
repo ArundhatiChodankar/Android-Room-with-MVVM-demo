@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/courseListFragment">
+
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.androidroommvvmapplication.view.fragment.AddCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" >
+        <action
+            android:id="@+id/action_addCourseFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="com.example.androidroommvvmapplication.view.fragment.CourseListFragment"
+        android:label="fragment_course_list"
+        tools:layout="@layout/fragment_course_list" >
+        <action
+            android:id="@+id/action_courseListFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+        <action
+            android:id="@+id/action_courseListFragment_to_editCourseFragment"
+            app:destination="@id/editCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCourseFragment"
+        android:name="com.example.androidroommvvmapplication.view.fragment.EditCourseFragment"
+        android:label="fragment_edit_course"
+        tools:layout="@layout/fragment_edit_course" >
+        <action
+            android:id="@+id/action_editCourseFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+        <argument
+            android:name="course"
+            app:argType="com.example.androidroommvvmapplication.model.data.model.Course" />
+    </fragment>
+</navigation>

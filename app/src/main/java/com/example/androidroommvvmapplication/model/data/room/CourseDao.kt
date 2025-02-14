@@ -27,7 +27,7 @@ interface CourseDao {
     @Query("Select * from Course where name like :searchQuery")
     fun searchCoursesByName(searchQuery: String): LiveData<List<Course>>
 
-    @Query("Select * from Course where startDate<CURDATE()")
+    @Query("Select * from Course where startDate< CURRENT_TIMESTAMP")
     fun getAlreadyStartedCourses(): LiveData<List<Course>>
 
     @Query("Select * from Course where type = :type")
